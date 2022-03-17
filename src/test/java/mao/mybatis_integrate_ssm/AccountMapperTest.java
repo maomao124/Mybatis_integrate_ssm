@@ -5,9 +5,12 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -52,6 +55,9 @@ class AccountMapperTest
     @Test
     void save1()
     {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Bean.xml");
+        AccountMapper accountMapper = applicationContext.getBean(AccountMapper.class);
+        System.out.println(accountMapper);
 
     }
 
@@ -65,10 +71,36 @@ class AccountMapperTest
         //通过SqlSessionFactory创建SqlSession
         SqlSession sqlSession = sqlSessionFactory.openSession();
         AccountMapper accountMapper = sqlSession.getMapper(AccountMapper.class);
+        List<Account> list = accountMapper.findAll();
+        for (Account account : list)
+        {
+            System.out.println(account);
+        }
     }
 
     @Test
     void findAll1()
     {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Bean.xml");
+        AccountMapper accountMapper = applicationContext.getBean(AccountMapper.class);
+        System.out.println(accountMapper);
+        List<Account> list = accountMapper.findAll();
+        for (Account account : list)
+        {
+            System.out.println(account);
+        }
+    }
+
+    @Test
+    void findAll2()
+    {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Bean.xml");
+        AccountServiceImpl accountService = applicationContext.getBean(AccountServiceImpl.class);
+        List<Account> list = accountService.findAll();
+        for (Account account : list)
+        {
+            System.out.println(account);
+        }
+
     }
 }

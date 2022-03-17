@@ -19,10 +19,10 @@ import java.util.List;
  * Description(描述)： 无
  */
 
-@Service("accountService")
+@Service
 public class AccountServiceImpl implements AccountService
 {
-    @Resource
+    @Autowired
     private AccountMapper accountMapper;
 
     @Override

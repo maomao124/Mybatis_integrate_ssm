@@ -26,14 +26,14 @@ import java.util.List;
 public class AccountController
 {
     @Autowired
-    private AccountServiceImpl accountService;
+    private AccountServiceImpl accountServiceImpl;
 
     //保存
     @RequestMapping(value = "/save", produces = "text/html;charset=UTF-8")
     @ResponseBody
     public String save(Account account)
     {
-        accountService.save(account);
+        accountServiceImpl.save(account);
         return "保存成功";
     }
 
@@ -41,7 +41,7 @@ public class AccountController
     @RequestMapping("/findAll")
     public ModelAndView findAll()
     {
-        List<Account> accountList = accountService.findAll();
+        List<Account> accountList = accountServiceImpl.findAll();
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("accountList", accountList);
         modelAndView.setViewName("accountList");
