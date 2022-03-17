@@ -1,5 +1,6 @@
 package mao.mybatis_integrate_ssm;
 
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +22,7 @@ import java.util.List;
 @Service("accountService")
 public class AccountServiceImpl implements AccountService
 {
-
-    @Autowired
+    @Resource
     private AccountMapper accountMapper;
 
     @Override

@@ -25,8 +25,8 @@ import java.util.List;
 @Controller
 public class AccountController
 {
-    @Resource
-    private AccountService accountService;
+    @Autowired
+    private AccountServiceImpl accountService;
 
     //保存
     @RequestMapping(value = "/save", produces = "text/html;charset=UTF-8")
