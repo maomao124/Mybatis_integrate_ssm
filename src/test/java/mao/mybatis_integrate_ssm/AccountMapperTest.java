@@ -102,6 +102,5 @@ class AccountMapperTest
         {
             System.out.println(account);
         }
-
     }
 }

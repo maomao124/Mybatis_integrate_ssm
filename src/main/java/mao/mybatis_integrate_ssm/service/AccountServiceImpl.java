@@ -41,6 +41,7 @@ public class AccountServiceImpl implements AccountService
     @Override
     public List<Account> findAll()
     {
+        System.out.println(accountMapper);
         return accountMapper.findAll();
     }
 }

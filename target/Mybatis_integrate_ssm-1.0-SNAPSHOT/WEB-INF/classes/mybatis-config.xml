@@ -110,36 +110,36 @@
 
 
     <!-- 配置mybatis运行环境 ，default：默认运行环境 -->
-    <environments default="development">
-        <environment id="development">
-            <!-- 使用JDBC的事务管理 ，两个事务管理器，JDBC或MANAGED-->
-            <transactionManager type="JDBC"/>
+<!--    <environments default="development">-->
+<!--        <environment id="development">-->
+<!--            &lt;!&ndash; 使用JDBC的事务管理 ，两个事务管理器，JDBC或MANAGED&ndash;&gt;-->
+<!--            <transactionManager type="JDBC"/>-->
 
-            <!--配置数据库的连接属性-->
-            <!--type属性用于指定数据源类型-->
-            <!--UNPOOLED ：没有数据库连接池，效率低下。MyBatis需要打开和关闭每个数据库操作的连接，它有点慢，通常应用于简单的应用程序。-->
-            <!--POOLED：   对于 POOLED 数据源类型，MyBatis将维护一个数据库连接池。并且对于每个数据库的操作，-->
-            <!--           MyBatis都会使用连接池中的连接，并在操作完成后将它们返回到池中。减少了创建新连接所需的初始连接和身份验证时间。-->
-            <!--JNDI：     对于JNDI的数据源类型，MyBatis将从JNDI数据源中获取连接。-->
-            <dataSource type="POOLED">
-                <!-- MySQL数据库驱动 -->
-                <property name="driver" value="${jdbc.driver}"/>
-                <!-- 连接数据库的URL -->
-                <property name="url" value="${jdbc.url}"/>
-                <!--用户名-->
-                <property name="username" value="${jdbc.username}"/>
-                <!--密码-->
-                <property name="password" value="${jdbc.password}"/>
-            </dataSource>
-        </environment>
-    </environments>
+<!--            &lt;!&ndash;配置数据库的连接属性&ndash;&gt;-->
+<!--            &lt;!&ndash;type属性用于指定数据源类型&ndash;&gt;-->
+<!--            &lt;!&ndash;UNPOOLED ：没有数据库连接池，效率低下。MyBatis需要打开和关闭每个数据库操作的连接，它有点慢，通常应用于简单的应用程序。&ndash;&gt;-->
+<!--            &lt;!&ndash;POOLED：   对于 POOLED 数据源类型，MyBatis将维护一个数据库连接池。并且对于每个数据库的操作，&ndash;&gt;-->
+<!--            &lt;!&ndash;           MyBatis都会使用连接池中的连接，并在操作完成后将它们返回到池中。减少了创建新连接所需的初始连接和身份验证时间。&ndash;&gt;-->
+<!--            &lt;!&ndash;JNDI：     对于JNDI的数据源类型，MyBatis将从JNDI数据源中获取连接。&ndash;&gt;-->
+<!--            <dataSource type="POOLED">-->
+<!--                &lt;!&ndash; MySQL数据库驱动 &ndash;&gt;-->
+<!--                <property name="driver" value="${jdbc.driver}"/>-->
+<!--                &lt;!&ndash; 连接数据库的URL &ndash;&gt;-->
+<!--                <property name="url" value="${jdbc.url}"/>-->
+<!--                &lt;!&ndash;用户名&ndash;&gt;-->
+<!--                <property name="username" value="${jdbc.username}"/>-->
+<!--                &lt;!&ndash;密码&ndash;&gt;-->
+<!--                <property name="password" value="${jdbc.password}"/>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
 
 
     <!--*****************************************************************************-->
 
 
     <!--将mapper文件加入到配置文件中，指定MyBatisSQL映射文件的路径-->
-    <mappers>
-        <mapper resource="AccountMapper.xml"/>
-    </mappers>
+<!--    <mappers>-->
+<!--        <mapper resource="mapper/AccountMapper.xml"/>-->
+<!--    </mappers>-->
 </configuration>
