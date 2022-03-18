@@ -36,7 +36,7 @@ public class AccountController
     }
 
     //保存
-    @RequestMapping(value = "/save", produces = "text/html;charset=UTF-8")
+    @RequestMapping(value = "/save1", produces = "text/html;charset=UTF-8")
     @ResponseBody
     public String save(Account account)
     {
