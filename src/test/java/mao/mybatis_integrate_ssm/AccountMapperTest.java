@@ -1,5 +1,8 @@
 package mao.mybatis_integrate_ssm;
 
+import mao.mybatis_integrate_ssm.data.Account;
+import mao.mybatis_integrate_ssm.mapper.AccountMapper;
+import mao.mybatis_integrate_ssm.service.AccountServiceImpl;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -11,8 +14,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Project name(项目名称)：Mybatis_integrate_ssm

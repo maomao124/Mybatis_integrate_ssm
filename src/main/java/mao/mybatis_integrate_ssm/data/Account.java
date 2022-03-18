@@ -1,4 +1,4 @@
-package mao.mybatis_integrate_ssm;
+package mao.mybatis_integrate_ssm.data;
 
 /**
  * Project name(项目名称)：Mybatis_integrate_ssm

@@ -1,6 +1,9 @@
-package mao.mybatis_integrate_ssm;
+package mao.mybatis_integrate_ssm.controller;
+
 
 import jakarta.annotation.Resource;
+import mao.mybatis_integrate_ssm.service.AccountServiceImpl;
+import mao.mybatis_integrate_ssm.data.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,8 +28,12 @@ import java.util.List;
 @Controller
 public class AccountController
 {
-    @Autowired
     private AccountServiceImpl accountServiceImpl;
+
+    public void setAccountServiceImpl(AccountServiceImpl accountServiceImpl)
+    {
+        this.accountServiceImpl = accountServiceImpl;
+    }
 
     //保存
     @RequestMapping(value = "/save", produces = "text/html;charset=UTF-8")

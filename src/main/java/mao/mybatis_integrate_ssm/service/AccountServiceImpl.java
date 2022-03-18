@@ -1,6 +1,8 @@
-package mao.mybatis_integrate_ssm;
+package mao.mybatis_integrate_ssm.service;
 
 import jakarta.annotation.Resource;
+import mao.mybatis_integrate_ssm.data.Account;
+import mao.mybatis_integrate_ssm.mapper.AccountMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +21,14 @@ import java.util.List;
  * Description(描述)： 无
  */
 
-@Service
+@Service("accountServiceImpl")
 public class AccountServiceImpl implements AccountService
 {
+    public AccountServiceImpl()
+    {
+        System.out.println("accountServiceImpl...");
+    }
+
     @Autowired
     private AccountMapper accountMapper;
 

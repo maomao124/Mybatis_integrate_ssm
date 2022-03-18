@@ -1,4 +1,6 @@
-package mao.mybatis_integrate_ssm;
+package mao.mybatis_integrate_ssm.service;
+
+import mao.mybatis_integrate_ssm.data.Account;
 
 import java.util.List;
 

@@ -1,4 +1,7 @@
-package mao.mybatis_integrate_ssm;
+package mao.mybatis_integrate_ssm.mapper;
+
+import mao.mybatis_integrate_ssm.data.Account;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -15,6 +18,7 @@ import java.util.List;
  * Description(描述)： 无
  */
 
+@Mapper
 public interface AccountMapper
 {
     public void save(Account account);
